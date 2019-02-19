@@ -83,7 +83,7 @@ zImage:  arch/arm/boot/zImage
 
 dtb:  arch/arm/boot/dts/imx6ull-14x14-evk-gpmi-weim.dtb
 
-使用MFG-tool下载到target(mfg tool 只支持windows,以下操作是在windows上进行)：
+使用[MFG-tool](https://github.com/fukehan/mfg-tool)下载到target(mfg tool 只支持windows,以下操作是在windows上进行)：
 
 - 拷贝上述4个文件到mfg tool 目录下 "mfgtools\Profiles\Linux\OS Firmware\imx6ull14x14evk"
 - target 通过 usb cable 和 windows 连接:
