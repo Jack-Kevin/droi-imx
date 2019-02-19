@@ -31,4 +31,13 @@
      <copyfile src="imx/README" dest="README-IMXBSP"/>
   </project>
 
+
+  <!-- Droi add private meta -->
+  <remote fetch="git://github.com/fukehan"  name="Droi"/>
+
+  <project remote="Droi" name="mata-droi-fsl" path="sources/mata-droi-fsl" revision="master" >
+     <copyfile src="tools/droi-fsl-setup-release.sh" dest="droi-fsl-setup-release.sh"/>
+  </project>
+  <!-- -->
+
 </manifest>
