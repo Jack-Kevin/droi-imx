@@ -72,3 +72,35 @@ $ make make imx6ull-14x14-evk-gpmi-weim.dtb
 $ make zImage
 ```
 
+### 下载到nxp target
+nxp target boot 需要4个文件： uboot, kernel-dtb, kernel-zImage, rootfs.
+
+uboot: u-boot-imx/u-boot.imx
+
+rootfs: build-fb/tmp/deploy/images/imx6ull14x14evk/droi-fsl-image-imx-imx6ull14x14evk.tar.bz2
+
+zImage:  arch/arm/boot/zImage
+
+dtb:  arch/arm/boot/dts/imx6ull-14x14-evk-gpmi-weim.dtb
+
+使用MFG-tool下载到target(mfg tool 只支持windows,以下操作是在windows上进行)：
+
+- 拷贝上述4个文件到mfg tool 目录下 "mfgtools\Profiles\Linux\OS Firmware\imx6ull14x14evk"
+- target 通过 usb cable 和 windows 连接:
+  ![usb connetc](https://github.com/fukehan/droi-imx/blob/master/img/usb-download-connet.jpg)
+- 点击mfgtool2-yocto-mx-evk-nand.vbs，弹出下载框：
+  ![下载框](https://github.com/fukehan/droi-imx/blob/master/img/nxp-download.png)
+  
+- 接通12V电源，点击start 开始下载
+
+如果target 已经下载过， 需要先擦除nand才能继续下载：
+
+- 用 uart 连接target和电脑，target 上电开机后， u-boot有3s的等待时间，按任意键进入u-boot commnd界面， 
+  运行命令：nand erase.chip clean
+- 然后正常
+
+
+
+
+
+
