@@ -97,7 +97,12 @@ dtb:  arch/arm/boot/dts/imx6ull-14x14-evk-gpmi-weim.dtb
 
 - 用 uart 连接target和电脑，target 上电开机后， u-boot有3s的等待时间，按任意键进入u-boot commnd界面， 
   运行命令：nand erase.chip clean
-- 然后正常
+- 然后正常进行下载
+
+uart 连接方式：
+![uart](https://github.com/fukehan/droi-imx/blob/master/img/uart-connet.jpg)
+
+第1根 TX， 第2根 RX， 第3根是地线
 
 
 
