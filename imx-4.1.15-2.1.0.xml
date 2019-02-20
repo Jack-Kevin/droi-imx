@@ -35,7 +35,7 @@
   <!-- Droi add private meta -->
   <remote fetch="git://github.com/fukehan"  name="Droi"/>
 
-  <project remote="Droi" name="mata-droi-fsl" path="sources/mata-droi-fsl" revision="master" >
+  <project remote="Droi" name="meta-droi-fsl" path="sources/meta-droi-fsl" revision="master" >
      <copyfile src="tools/droi-fsl-setup-release.sh" dest="droi-fsl-setup-release.sh"/>
   </project>
   <!-- -->
