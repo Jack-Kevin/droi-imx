@@ -17,7 +17,6 @@
   <project remote="freescale" revision="krogoth" name="fsl-community-bsp-base" path="sources/base">
        <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
-
   <project remote="freescale" revision="3dfb82fc7e703eae9891b3ffda0e9393701f2396" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
   <project remote="freescale" revision="a165068f8a0d1cf29aabe4b4053f28be1c2aa492" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
 
@@ -29,5 +28,8 @@
   <project remote="Droi" name="meta-droi-fsl" path="sources/meta-droi-fsl" revision="master" >
      <linkfile src="tools/droi-fsl-setup-release.sh" dest="droi-fsl-setup-release.sh"/>
   </project>
+
+  <project remote="Droi" name="linux-imx" path="srcs/linux-imx" revision="master"/>
+  <project remote="Droi" name="u-boot-imx" path="srcs/u-boot-imx" revision="master"/>
 
 </manifest>
