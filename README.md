@@ -24,7 +24,7 @@ $ repo sync
 然后：
 
 ```
-$ DISTRO=fsl-imx-fb MACHINE=imx6ull14x14evk source ./droi-fsl-setup-release.sh -b build-fb
+$ DISTRO=fsl-imx-fb MACHINE=imx6ull14x14evk source droi-fsl-setup-release.sh -b build-fb
 ```
 中间会出现license提示，一路按**空格键**，直到最后按 **y** 确认，最后创建 **build-fb** 目录，并自动cd到
 该目录下，然后继续执行：
