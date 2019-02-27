@@ -116,7 +116,7 @@ linux 下烧录（以下在ubuntu 14.04 LTS 上测试成功）:
   ```
   <LIST name="NAND" desc="Choose NAND as media">
   ```
-  此出name 保持和mfgtool2-yocto-mx-evk-nand.vbs中的一致。
+  此处name 保持和mfgtool2-yocto-mx-evk-nand.vbs中的一致。
   
   另外，ucl2.xml文件开头删除多余的，只保留：
   ```
@@ -151,10 +151,10 @@ linux 下烧录（以下在ubuntu 14.04 LTS 上测试成功）:
   
 - 如果nand不是第一次下载，同样需要清空nand, 连接uart, 进入u-boot清除nand, 如下在ubuntu上使用putty连接uart:
   putty如下配置：
-  ![putty](https://github.com/fukehan/droi-imx/blob/master/img/linux-putty-config.png)
+  <div align=center><img src="https://github.com/fukehan/droi-imx/blob/master/img/linux-putty-config.png"/></div>
   
   上电后，按任意键进入u-boot command:
-  ![putty-uboot](https://github.com/fukehan/droi-imx/blob/master/img/linux-uboot-nand.png)
+  <div align=center><img src="https://github.com/fukehan/droi-imx/blob/master/img/linux-uboot-nand.png"/></div>
   
   输入"nand erase.chip clean" 清空nand, 按上面的步骤下载。
   
