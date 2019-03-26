@@ -27,7 +27,6 @@
 
   <project remote="Droi" name="meta-droi-fsl" path="sources/meta-droi-fsl" revision="master" >
      <linkfile src="tools/droi-fsl-setup-release.sh" dest="droi-fsl-setup-release.sh"/>
-     <copyfile src="override/sysvinit-inittab_2.88dsf.bb" dest="sources/poky/meta/recipes-core/sysvinit/sysvinit-inittab_2.88dsf.bb"/>
   </project>
 
   <project remote="Droi" name="linux-imx" path="srcs/linux-imx" revision="master"/>
