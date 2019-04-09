@@ -73,6 +73,9 @@ $ make zImage
 ```
 
 ### 下载到nxp target
+
+网络升级请参考 [online update](https://github.com/fukehan/droi-imx/blob/master/Online-update.md)
+
 nxp target boot 需要4个文件： uboot, kernel-dtb, kernel-zImage, rootfs.
 
 uboot: u-boot-imx/u-boot.imx
