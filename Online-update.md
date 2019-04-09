@@ -66,7 +66,7 @@ drwxr-xr-x  7 root root 4096 Mar 15 12:36 var
 $ sudo apt-get install mtd-utils
 ```
 
-- 生产ubi image
+- 生成ubi image
 
 ```
 $ sudo mkfs.ubifs -F -q -r /tftpboot -m 2048 -e 126976 -c 1120 -o ~/ubifs.img
@@ -84,9 +84,9 @@ vol_name=rootfs
 vol_flags=autoresize
 ```
 
-其中 image 路径为mkfs.ubifs生产的img文件，路径要对应
+其中 image 路径为mkfs.ubifs生成的img文件，路径要对应
 
-最后用ubinize命令生产最终的ubifs img:
+最后用ubinize命令生成最终的ubifs img:
 
 ```
 $ sudo ubinize -o ~/ubi.img -m 2048 -p 128KiB ~/ubinize.cfg
@@ -103,7 +103,7 @@ ubi.img 即为用来刷机的镜像文件
 ```
 $ sh /etc/init.d/update.sh 00:11:22:33:44:55 192.168.100.20 192.168.100.200
 ```
-执行update.sh 后，自动重启进入uboot, uboot 自动刷入 ubi.img文件。
+执行 update.sh 后，自动重启进入uboot, uboot 自动刷入 ubi.img 文件。
 
 
 
