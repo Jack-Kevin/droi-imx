@@ -106,4 +106,58 @@ $ sh /etc/init.d/update.sh 00:11:22:33:44:55 192.168.100.20 192.168.100.200
 执行 update.sh 后，自动重启进入uboot, uboot 自动刷入 ubi.img 文件。
 
 
+### nxp nand 分区说明
+
+- nand 分区查看：
+```
+# cat /proc/mtd
+dev:    size   erasesize  name
+mtd0: 04000000 00020000 "boot"
+mtd1: 01000000 00020000 "kernel"
+mtd2: 01000000 00020000 "dtb"
+mtd3: 00100000 00020000 "misc"
+mtd4: 09f00000 00020000 "rootfs"
+```
+
+- 分区起始地址：
+由上面的分区表计算出分区地址：
+
+```
+0x00000000 -- 0x04000000  boot
+0x04000000 -- 0x05000000  kernel
+0x05000000 -- 0x06000000  dtb
+0x06000000 -- 0x06100000  misc
+0x06100000 -- 0x10000000  rootfs
+```
+
+### mkfs.ubifs 参数说明
+
+查看 mtd4 (rootfs) info:
+
+```
+root@imx6ull14x14evk:~# mtdinfo /dev/mtd4 -u
+mtd4
+Name:                           rootfs
+Type:                           nand
+Eraseblock size:                131072 bytes, 128.0 KiB
+Amount of eraseblocks:          1272 (166723584 bytes, 159.0 MiB)
+Minimum input/output unit size: 2048 bytes
+Sub-page size:                  2048 bytes
+OOB size:                       64 bytes
+Character device major/minor:   90:8
+Bad blocks are allowed:         true
+Device is writable:             true
+Default UBI VID header offset:  2048
+Default UBI data offset:        4096
+Default UBI LEB size:           126976 bytes, 124.0 KiB
+Maximum UBI volumes count:      128
+```
+
+-m   Minimum input/output unit size: 2048 bytes
+-e   Default UBI LEB size:           126976 bytes, 124.0 KiB
+-c   1120 = (vol_size 140MiB * 1024 ) / 128
+
+
+
+
 
