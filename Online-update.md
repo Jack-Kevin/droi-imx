@@ -153,9 +153,11 @@ Default UBI LEB size:           126976 bytes, 124.0 KiB
 Maximum UBI volumes count:      128
 ```
 
+```
 -m   Minimum input/output unit size: 2048 bytes
 -e   Default UBI LEB size:           126976 bytes, 124.0 KiB
 -c   1120 = (vol_size 140MiB * 1024 ) / 128
+```
 
 
 
